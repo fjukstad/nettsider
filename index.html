@@ -27,27 +27,275 @@
 <p>Presentasjonen fra intruduksjonsforedraget ligger <a href="https://github.com/skolelab/nettsider/raw/master/presentasjoner/presentasjon.pdf">her</a>. </p>
 
 <h1>
-<a id="oppgave-1---utforske-tagger-og-html" class="anchor" href="#oppgave-1---utforske-tagger-og-html" aria-hidden="true"><span class="octicon octicon-link"></span></a>Oppgave 1 - Utforske tagger og HTML</h1>
+<a id="prosjekt-1---din-første-nettside" class="anchor" href="#prosjekt-1---din-f%C3%B8rste-nettside" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prosjekt 1 - Din første nettside</h1>
 
-<p>Denne oppgaven finner du her: <a href="http://kodeklubben.github.io/web/lesson1/lesson1.html">http://kodeklubben.github.io/web/lesson1/lesson1.html</a>. </p>
+<p>I denne oppgaven skal vi lage vår helt første nettside! Vi skal starte helt fra
+scratch og lage en nettside om deg og ting du liker. Du kommer til å lære de
+vanligste HTML-taggene som lar deg lage lister, sette inn bilder, sette in
+linker og til og med en video fra YouTube!</p>
+
+<h2>
+<a id="steg-1-sette-opp-noen-mapper-og-filer" class="anchor" href="#steg-1-sette-opp-noen-mapper-og-filer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 1: Sette opp noen mapper og filer</h2>
+
+<p>Det første du må gjøre er å sette opp en mappe hvor vi kan ha nettsiden vår.</p>
+
+<ul>
+<li>Lag en ny mappe på f.eks skrivebordet med navnet <code>Prosjekt-1</code>. </li>
+<li>Åpne programmet <code>Notepad++</code> eller et annet tekstprogram (et program som lar
+deg redigere tekstfiler. Eksempler er Notisblokk, Notepad++ eller TextEdit) </li>
+<li>Lagre den tomme fila som <code>index.html</code> i mappa du laget i steget over. Navnet
+<code>index.html</code> er ikke tilfeldig. Dette er et standard navn som gis til alle
+startsider, f.eks forsiden av Facebook, NRK eller Instagram. </li>
+</ul>
+
+<h2>
+<a id="steg-2-de-første-taggene" class="anchor" href="#steg-2-de-f%C3%B8rste-taggene" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 2: De første taggene</h2>
+
+<p>Det første vi skal gjøre er å sette opp et skall vi kan lage nettsiden. Da
+trenger vi taggene <code>html</code>, <code>head</code> og <code>body</code>. <code>html</code> brukes til å definere
+nettsida, hele nettsida kommer innenfor disse. I <code>head</code> kan vi bla. legge inn regler
+for hvordan nettsida skal se ut og <code>body</code> brukes til å inneholde alt det vi ser
+på nettsida</p>
+
+<ul>
+<li>Lag nettsida som vist under: </li>
+</ul>
+
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Legg merke til at vi har åpne-tags og lukke-tags. <code>&lt;html&gt;</code> åpner og <code>&lt;/html&gt;</code>
+lukker. </p>
+
+<ul>
+<li>Inne i <code>&lt;body&gt;</code> skriver du "Hei, jeg heter NAVN!" hvor du erstatter NAVN med
+ditt eget navn. Hvis du heter Bjørn skal fila se slik ut: </li>
+</ul>
+
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Hei, jeg heter Bjørn! 
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<ul>
+<li>Om du har et navn som inneholder bokstene Æ, Ø eller Å vil du se at sida ser
+litt rar ut. For å få den til å forstå norske bokstaver må vi legge inn en
+liten tag i <code>&lt;head&gt;</code>-taggen: </li>
+</ul>
+
+<pre><code>&lt;meta charset="UTF-8"&gt;
+</code></pre>
+
+<h2>
+<a id="steg-3-se-hvordan-det-ser-ut-i-en-nettleser" class="anchor" href="#steg-3-se-hvordan-det-ser-ut-i-en-nettleser" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 3: Se hvordan det ser ut i en nettleser!</h2>
+
+<p>Nå vil vi ta en titt på hvordan nettsida ser ut. Åpne mappa du laget og
+dobbelklikk på fila <code>index.html</code>. Nå skal en nettleser ha åpnet seg og du kan </p>
+
+<h2>
+<a id="steg-4-lag-en-liste-med-ting-du-liker" class="anchor" href="#steg-4-lag-en-liste-med-ting-du-liker" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 4: Lag en liste med ting du liker</h2>
+
+<p>La oss lage en liste med ting du liker. For å lage en nummerert liste må vi lære
+oss <code>ul</code> og <code>li</code> taggene. <code>ul</code> er for å lage en liste og <code>li</code> brukes til å lage
+hvert av punktene i lista. Åpne tekstprogrammet igjen og legg til en liste under
+teksten du la inn.</p>
+
+<p>Først må vi sette opp lista vår: </p>
+
+<pre><code>&lt;ul&gt; 
+&lt;/ul&gt;
+</code></pre>
+
+<p>Så må vi legge inn ting i lista: </p>
+
+<pre><code>&lt;ul&gt;
+    &lt;li&gt; Første ting &lt;/li&gt;
+    &lt;li&gt; Andre ting &lt;/li&gt; 
+
+&lt;/ul&gt;
+</code></pre>
+
+<p>Legg inn ting du liker med taggene <code>&lt;li&gt; &lt;/li&gt;</code>. Når du har lagt inn et par ting
+du liker skal fila se slik ut: </p>
+
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Hei, jeg heter Bjørn! 
+
+        Her er et par ting jeg liker: 
+        &lt;ul&gt; 
+            &lt;li&gt; Programmering &lt;/li&gt;
+            &lt;li&gt; Taco &lt;/li&gt; 
+            &lt;li&gt; Musikk &lt;/li&gt; 
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2>
+<a id="steg-5-litt-finere-nettside" class="anchor" href="#steg-5-litt-finere-nettside" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 5: Litt finere nettside</h2>
+
+<p>Sida ser jo grei ut, men la oss endre litt på utseende. For å lage overskrifter
+kan vi bruke taggene <code>h1</code>, <code>h2</code>, <code>h3</code> osv. og for å lage en tekstparagraf kan vi
+bruke <code>p</code>. </p>
+
+<ul>
+<li>Pakk inn overskrifta i en <code>&lt;h1&gt;</code>-tag slik at det ser ut som dette: </li>
+</ul>
+
+<pre><code>&lt;h1&gt; Hei, jeg heter Bjørn! &lt;/h1&gt; 
+</code></pre>
+
+<ul>
+<li>Så lager vi en litt mindre overskrift til favorittingene dine: </li>
+</ul>
+
+<pre><code>&lt;h3&gt; Her er et par ting jeg liker &lt;/h3&gt; 
+</code></pre>
+
+<h2>
+<a id="steg-6-nummerert-liste-med-favoritter" class="anchor" href="#steg-6-nummerert-liste-med-favoritter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 6: Nummerert liste med favoritter</h2>
+
+<p>La oss legge inn en liste med noen favoritter, f.eks fotballspillere, mat,
+biler, sykler, band, revyer, filmer, gutter eller jenter. En nummerert liste
+ligner veldig på en unummerert liste, men nå bruker vi <code>ol</code>-taggen for å lage
+lista og ikke <code>ul</code> som over. </p>
+
+<ul>
+<li>Skriv en overskrift over favorittene og legg dem inn i en liste: </li>
+</ul>
+
+<pre><code>&lt;h3&gt; Min favorittmat &lt;/h3&gt; 
+&lt;ol&gt;
+    &lt;li&gt;Taco&lt;/li&gt;
+    &lt;li&gt;Hamburger&lt;/li&gt;
+    &lt;li&gt;Pizza&lt;/li&gt;
+    &lt;li&gt;Kokt kveite&lt;/li&gt;
+&lt;/ol&gt; 
+</code></pre>
+
+<h2>
+<a id="steg-7-legg-til-en-link-til-favoritten" class="anchor" href="#steg-7-legg-til-en-link-til-favoritten" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 7: Legg til en link til favoritten</h2>
+
+<p>Klarer du å legge inn linker i favorittlista din? Hvis du laget en liste over
+mat, kan du kanskje linke til en oppskrift? Hvis du la inn en liste over filmer
+kan du kanskje linke til en anmeldelse eller trailer? For å legge inn en link må
+vi bruke <code>a</code> taggen: </p>
+
+<pre><code>&lt;a href="http://COPY-PASTE-SIDA-DU-VIL-LINKE-TIL-HER"&gt; Synlig tekst &lt;/a&gt; 
+</code></pre>
+
+<p>da vil teksten "Synlig tekst" vises og om man trykker på den blir man sendt
+vidre til nettsida du la inn. Prøv å legg inn linker selv! </p>
+
+<p>Her er et eksempel på å linke til oppskrifter: </p>
+
+<pre><code>&lt;ol&gt;
+    &lt;li&gt;&lt;a href="http://www.klikk.no/mat/spise/article511911.ece"&gt;Taco&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="http://oppskrift.klikk.no/hamburger/1055/"&gt;Hamburger&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="http://oppskrift.klikk.no/pizza/2267/"&gt;Pizza&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="http://oppskrift.klikk.no/superrask-tomatsuppe/4046/"&gt;Tomatsuppe&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt; 
+</code></pre>
+
+<h2>
+<a id="steg-8-legg-inn-et-bilde" class="anchor" href="#steg-8-legg-inn-et-bilde" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 8: Legg inn et bilde!</h2>
+
+<p>Siste steg i dette prosjektet er å legge inn et bilde. Da trenger vi å lære oss
+om <code>img</code> taggene. Disse ligner veldig på <code>a</code> taggen for å legge inn en link, men
+i stedet for at vi blir sendt vidre til bildet får vi nettleseren til å vise det
+i stedet. </p>
+
+<p>Under listen med favorittene kan du legge til et bilde av noe du syns er gøy,
+kanskje en artig gif? </p>
+
+<pre><code>&lt;h3&gt; Hvordan det føles å være ferdig med første prosjekt &lt;/h3&gt; 
+&lt;img src="http://i.imgur.com/aZPFg2t.gif"&gt;&lt;/img&gt; 
+</code></pre>
 
 <h1>
-<a id="oppgave-2---lag-en-hjemmeside" class="anchor" href="#oppgave-2---lag-en-hjemmeside" aria-hidden="true"><span class="octicon octicon-link"></span></a>Oppgave 2 - Lag en hjemmeside</h1>
+<a id="prosjekt-2-publiser-nettsiden-på-internett" class="anchor" href="#prosjekt-2-publiser-nettsiden-p%C3%A5-internett" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prosjekt 2: Publiser nettsiden på internett!</h1>
 
-<p>Denne oppgaven finner du her: <a href="http://kodeklubben.github.io/web/lesson2/lesson2.html">http://kodeklubben.github.io/web/lesson2/lesson2.html</a> </p>
+<p>Nå som vi har laget en enkel side om oss selv er det på tide å legge den på
+nett! I dette prosjektet skal du ende opp med en link du kan dele med andre som
+viser nettsida di. Jeg har delt min nettside <a href="http://bl.ocks.org/fjukstad/raw/88baf748161cdd97fd7b/">her</a>. </p>
+
+<h2>
+<a id="steg-1-lag-en-konto-på-githubcom" class="anchor" href="#steg-1-lag-en-konto-p%C3%A5-githubcom" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 1: Lag en konto på Github.com</h2>
+
+<p>Det første du må gjøre er å lage deg en konto på nettsiden
+<a href="http://github.com">github.com</a>. Github er en nettside som folk rundt om i hele
+verden bruker til å dele kode med hverandre. Her finner du bla. mye av koden som
+ligger bak sider som <a href="https://github.com/finn-no">Finn.no</a>,
+<a href="https://github.com/facebook">Facebook</a>, eller
+<a href="https://github.com/spotify">Spotify</a>. </p>
+
+<ul>
+<li>Gå til <a href="https://github.com/">github.com</a> og lag en ny konto. </li>
+</ul>
+
+<h2>
+<a id="steg-2-logg-inn-og-lag-en-gist" class="anchor" href="#steg-2-logg-inn-og-lag-en-gist" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 2: Logg inn og lag en gist</h2>
+
+<p>Det neste vi skal gjøre er å logge inn på Github med brukeren du nettopp laget
+og lage en <code>gist</code>. En <code>gist</code> er lett måte å dele kode med andre, hvor man kan
+laste opp filer og får en link man kan dele med andre.</p>
+
+<ul>
+<li>Gå til nettsiden <a href="https://github.com/">github.com</a>, logg inn og trykk på
+"Gist" øverst på sida. </li>
+</ul>
+
+<p>Nå har du blitt sendt vidre til sida <a href="http://gist.github.com">gist.github.com</a>
+og du kan starte med å gjøre din første nettside offentlig. </p>
+
+<ul>
+<li>Dra inn <code>index.html</code>-fila du laget i Prosjekt 1 i nettsiden. Når du slipper
+den vil du se at koden din har blitt satt inn.</li>
+<li>Endre beskrivelsen i ruta "Gist description..." til noe som passer sida di.
+F.eks "Min første nettside". </li>
+<li>Trykk på "Create Public Gist" og du blir sendt vidre til en side som har en
+url som ligner på <code>https://gist.github.com/BRUKERNAVN/1234-LANG-STRENG</code>. f.eks 
+<a href="https://gist.github.com/fjukstad/88baf748161cdd97fd7b">https://gist.github.com/fjukstad/88baf748161cdd97fd7b</a>. </li>
+</ul>
+
+<p>Hvis du deler denne linken med andre kan de se på og laste ned koden, men vi ser
+jo ikke hvordan nettsida blir når den åpnes. Dette skal vi fikse i steg 3! Noter
+ned det som står bak <code>gist.github.com/</code> i adressen, det trenger vi i neste steg! </p>
+
+<h2>
+<a id="steg-3-publiser-nettsida" class="anchor" href="#steg-3-publiser-nettsida" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 3: Publiser nettsida!</h2>
+
+<p>For å få nettsida online skal vi bruke en side som heter
+<a href="http://bl.ocks.org/">bl.ocks.org</a>. Dette er en side som er laget for å se på
+<code>gist</code>s som vi laget i steg 2. </p>
+
+<ul>
+<li>Åpne en nettleser, skriv inn <code>bl.ocks.org/</code> + <code>ditt github brukernavn</code>  +
+<code>/raw/</code> + <code>den lange tekststrengen fra lenken i steg 2</code>, og trykk enter. Hvis du skrev riktig har du en lenke som ser slik ut:
+<a href="http://bl.ocks.org/fjukstad/raw/88baf748161cdd97fd7b/">http://bl.ocks.org/fjukstad/raw/88baf748161cdd97fd7b/</a>
+og du blir sendt vidre til nettsida du lagde. Fungerte det? </li>
+</ul>
 
 <h1>
-<a id="oppgave-3---forsvunnet-katt" class="anchor" href="#oppgave-3---forsvunnet-katt" aria-hidden="true"><span class="octicon octicon-link"></span></a>Oppgave 3 - Forsvunnet katt</h1>
+<a id="prosjekt-2-styling-av-nettsider" class="anchor" href="#prosjekt-2-styling-av-nettsider" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prosjekt 2: Styling av nettsider</h1>
 
-<p>Denne oppgaven finner du her: <a href="http://kodeklubben.github.io/web/lesson3/lesson3.html">http://kodeklubben.github.io/web/lesson3/lesson3.html</a> </p>
-
-<h1>
-<a id="oppgave-4---styling-av-nettsider" class="anchor" href="#oppgave-4---styling-av-nettsider" aria-hidden="true"><span class="octicon octicon-link"></span></a>Oppgave 4 - Styling av nettsider</h1>
-
-<p>Denne oppgaven finner du her: <a href="http://kodeklubben.github.io/web/lesson4/lesson4.html">http://kodeklubben.github.io/web/lesson4/lesson4.html</a> </p>
+<p>Her kommer en oppgave om styling av nettsider. </p>
 
 <h1>
-<a id="oppgave-5---egen-nettside-med-videoer-fra-youtube" class="anchor" href="#oppgave-5---egen-nettside-med-videoer-fra-youtube" aria-hidden="true"><span class="octicon octicon-link"></span></a>Oppgave 5 - Egen nettside med videoer fra YouTube</h1>
+<a id="prosjekt-3--egen-nettside-med-videoer-fra-youtube" class="anchor" href="#prosjekt-3--egen-nettside-med-videoer-fra-youtube" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prosjekt 3:  Egen nettside med videoer fra YouTube</h1>
 
 <p>Denne oppgaven har ingen oppgavetekst, så denne blir litt vanskeligere. Du skal
 lage en helt egen nettside som inneholder top 10 videoer fra YouTube om et tema
@@ -56,6 +304,11 @@ fram videoene fra YouTube og lag en side som lister opp disse. Ta gjerne med en
 liten beskrivelse av hvorfor videoene er med på lista! </p>
 
 <p>Tips til hvordan man legger inn en YouTube-video finner dere her: <a href="http://kodeklubben.github.io/web/lesson8/lesson8.html">http://kodeklubben.github.io/web/lesson8/lesson8.html</a>. </p>
+
+<h1>
+<a id="prosjekt-4-litt-programmering" class="anchor" href="#prosjekt-4-litt-programmering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prosjekt 4: Litt programmering</h1>
+
+<p>Her kommer det en oppgave hvor dere skal lære litt om programmeringsspråket JavaScript. </p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/skolelab/nettsider">nettsider</a> is maintained by <a href="https://github.com/skolelab">skolelab</a>.</span>
