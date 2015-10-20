@@ -292,23 +292,352 @@ og du blir sendt vidre til nettsida du lagde. Fungerte det? </li>
 <h1>
 <a id="prosjekt-2-styling-av-nettsider" class="anchor" href="#prosjekt-2-styling-av-nettsider" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prosjekt 2: Styling av nettsider</h1>
 
-<p>Her kommer en oppgave om styling av nettsider. </p>
+<p>I denne oppgaven skal vi få nettsida til å bli litt finere! For å plassere og
+sette farge på ting har vi et språk som heter CSS (Cascading style sheets). </p>
+
+<h2>
+<a id="steg-1-legge-til-styles" class="anchor" href="#steg-1-legge-til-styles" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 1: Legge til styles</h2>
+
+<p>CSS som beskriver hvordan nettsida vår ser ut legger vi inne i <code>head</code> taggen
+øverst i HTML-en. </p>
+
+<ul>
+<li>Åpne index.html fra forrige oppgave i et tekstprogram (f.eks Notepad++)</li>
+<li>I <code>head</code> taggen legger du til</li>
+</ul>
+
+<pre><code>&lt;style&gt;
+
+body {
+    background-color: pink;
+}
+
+&lt;/style&gt; 
+</code></pre>
+
+<p>slik at starten på <code>index.html</code> ser slik ut: </p>
+
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+
+        &lt;style&gt;
+            body {
+                background-color: pink;
+            }
+        &lt;/style&gt;
+
+        .
+        .
+        .
+</code></pre>
+
+<ul>
+<li>Åpne index.html i en nettleser og se at bakgrunnsfargen ble rosa. </li>
+</ul>
+
+<h2>
+<a id="steg-2-overskrifter" class="anchor" href="#steg-2-overskrifter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 2: Overskrifter</h2>
+
+<p>La oss lage de små overskfitene grønn. Da kan vi legge inn en regel for alle
+<code>h3</code> taggene: </p>
+
+<pre><code>h3 {
+    color: green;
+}
+</code></pre>
+
+<p>Kodesnutten over skal legges inn under koden vi la inn i steg 1. Men hva om vi
+vil at én av overskfitene skal være blå? La oss lage overskriften som står over
+bildet blå. I CSS-en vår nå har vi sakt at alt som er markert med <code>h3</code> skal være
+grønt, men nå vil vi at én av de skal være blå.  Da trenger vi å gi overskrifta
+en <code>id</code> som vi kan bruke i CSS-en vår. </p>
+
+<ul>
+<li>I <code>index.html</code> gå til overskrifta over bildet og endre <code>h3</code> taggen litt: </li>
+</ul>
+
+<pre><code>&lt;h3 id="overskrift"&gt; Hvordan det føles å være ... 
+</code></pre>
+
+<p>se at vi har lagt inn <code>id="overskrift"</code></p>
+
+<ul>
+<li>Legg til CSS-en vår legge til</li>
+</ul>
+
+<pre><code>#overskrift {
+    color: blue;
+}
+</code></pre>
+
+<p>i CSS-en vår øverst i index.html. </p>
+
+<h2>
+<a id="steg-3-sentrering-av-bilder-og-tekst" class="anchor" href="#steg-3-sentrering-av-bilder-og-tekst" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 3: Sentrering av bilder og tekst</h2>
+
+<p>La oss få bildet og overskrifta til å ligge sentrert på sida. I HTML bruker vi
+<code>div</code> tagger for å dele opp forskjellige deler av sida. </p>
+
+<ul>
+<li>Pakk inn overskrifta og bildet i en <code>div</code> med <code>id=bilde</code>: </li>
+</ul>
+
+<pre><code>&lt;div id="bilde"&gt;
+
+    &lt;h3 id="overskrift"&gt; Hvordan det føles ...
+    &lt;img src="....
+
+&lt;/div&gt; 
+</code></pre>
+
+<ul>
+<li>legg til en regel i CSS-en: </li>
+</ul>
+
+<pre><code>#bilde { 
+    text-align: center;
+}
+</code></pre>
+
+<ul>
+<li>Sjekk at overskrifta og bildet kommer midt på sida. </li>
+</ul>
+
+<h2>
+<a id="bonus-steg-4-gjør-nettsida-finere" class="anchor" href="#bonus-steg-4-gj%C3%B8r-nettsida-finere" aria-hidden="true"><span class="octicon octicon-link"></span></a>(BONUS) Steg 4: Gjør nettsida finere</h2>
+
+<p>Nå ser egentlig ikke nettsida ut. Kan du gjøre den finere? Her er det bare å
+prøve seg fram med farger og layout! Nederst på sida finner du noen ressurser
+til både HTML og CSS. </p>
+
+<h2>
+<a id="bonus-steg-5-gjør-nettsida-tilgjengelig-online" class="anchor" href="#bonus-steg-5-gj%C3%B8r-nettsida-tilgjengelig-online" aria-hidden="true"><span class="octicon octicon-link"></span></a>(BONUS) Steg 5: Gjør nettsida tilgjengelig online!</h2>
+
+<p>Gå tilbake til prosjekt 2 og last opp denne sida på nettet! </p>
 
 <h1>
 <a id="prosjekt-3--egen-nettside-med-videoer-fra-youtube" class="anchor" href="#prosjekt-3--egen-nettside-med-videoer-fra-youtube" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prosjekt 3:  Egen nettside med videoer fra YouTube</h1>
 
-<p>Denne oppgaven har ingen oppgavetekst, så denne blir litt vanskeligere. Du skal
-lage en helt egen nettside som inneholder top 10 videoer fra YouTube om et tema
-du velger selv. Liker du MineCraf? Justin Bieber? T.I.L? T.U.I.L? Hest? Finn
-fram videoene fra YouTube og lag en side som lister opp disse. Ta gjerne med en
-liten beskrivelse av hvorfor videoene er med på lista! </p>
+<p>Dette er det siste prosjektet hvor vi skal lage en nettside som består av flere
+HTML-filer som inneholder litt tekst om deg selv og noen YouTube-videoer.
+Nettsida om deg selv kan du gjenbruke fra Prosjekt 1 eller starte med en helt ny
+side. Her kommer vi kun til å gi dere et enkelt eksempel. Dere må selv finne ut
+av hva dere vil ha på sida og være litt kreativ i bruk av farger. </p>
 
-<p>Tips til hvordan man legger inn en YouTube-video finner dere her: <a href="http://kodeklubben.github.io/web/lesson8/lesson8.html">http://kodeklubben.github.io/web/lesson8/lesson8.html</a>. </p>
+<p>Hvis du vil se en demo av hvordan sida kan se ut kan du se
+<a href="http://bl.ocks.org/fjukstad/raw/ebb02d8f4bd48b6e26b0/">her</a>.</p>
+
+<h2>
+<a id="steg-1-lag-en-mappe-og-noen-tomme-filer" class="anchor" href="#steg-1-lag-en-mappe-og-noen-tomme-filer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 1: Lag en mappe og noen tomme filer.</h2>
+
+<p>Det første vi må gjøre er å sette opp en tom mappe for nettsida vår i tillegg
+til noen tomme HTML-filer vi kan legge innhold i. </p>
+
+<ul>
+<li>Lag en mappe som heter <code>nettside</code> og legg den et sted du husker, f.eks på
+Skrivebordet</li>
+<li>I denne mappa lager du 3 filer som heter <code>index.html</code>, <code>om.html</code> og
+<code>videoer.html</code>. Om du vil gjenbruke sida du laget om deg selv kan du kopiere
+den inn i mappa og kalle den <code>om.html</code>. </li>
+<li>I alle de nye filene legger du inn: </li>
+</ul>
+
+<pre><code>&lt;html&gt;
+    &lt;head&gt; 
+        &lt;meta charset="UTF-8"&gt;
+        &lt;style&gt;
+        &lt;/style&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt; 
+</code></pre>
+
+<p>Husk at du ikke skal legge dette inn i <code>om.html</code> om du gjenbruker sida fra
+Prosjekt 1. Nå har vi tre HTML filer vi kan begynne å legge inn innhold i! </p>
+
+<h2>
+<a id="steg-2-velkomstside" class="anchor" href="#steg-2-velkomstside" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 2: Velkomstside</h2>
+
+<p>Nå skal vi få satt opp en velkomstside som sier hei og har lenker til de andre
+sidene.</p>
+
+<ul>
+<li>Åpne <code>index.html</code> i et tekstprogram</li>
+<li>Lag en overskrift og en velkomstmelding: </li>
+</ul>
+
+<pre><code>&lt;h1&gt; Overskrift (sett inn noe her) &lt;/h1&gt; 
+&lt;p&gt; 
+    Her kan du skrive en fin velkomstmelding 
+&lt;/p&gt; 
+</code></pre>
+
+<p>Koden over skal inn i <code>body</code> taggen på HTML-sida. </p>
+
+<ul>
+<li>Sjekk at du får inn en overskrift </li>
+</ul>
+
+<p>Vi vil gjerne at teksten skal være på midten, så da kan vi pakke alt inn i en
+<code>div</code> og sentrere den med litt CSS.</p>
+
+<ul>
+<li>Pakk overskriften inn i en <code>div</code> og lag en CSS regel: </li>
+</ul>
+
+<pre><code>&lt;div id="tekst"&gt;
+    &lt;h1&gt; Overskrift .....
+
+&lt;/div&gt; 
+</code></pre>
+
+<p>og CSS-regelen blir da: </p>
+
+<pre><code>#tekst { 
+    text-align: center;
+}
+</code></pre>
+
+<ul>
+<li>Sjekk at det blir sentrert på sida.</li>
+</ul>
+
+<p>Nå må vi få inn en navigasjonsmeny på toppen! </p>
+
+<ul>
+<li>Lag et nytt <code>div</code> element over overskriften som vi kaller <code>nav</code>. Inne i denne
+lager vi noen lenker til de andre sidene: </li>
+</ul>
+
+<pre><code>    &lt;div id="nav"&gt; 
+        &lt;a class="nav-link" href="index.html"&gt;Hjem&lt;/a&gt; / 
+        &lt;a class="nav-link" href="om.html"&gt;Om&lt;/a&gt; /
+        &lt;a class="nav-link" href="videoer.html"&gt;Videoer&lt;/a&gt;
+    &lt;/div&gt; 
+</code></pre>
+
+<p>Denne koden setter opp en <code>div</code> med tre linker (<code>a</code> elementene) som hver peker
+til hver sin side. Hjem-lenken peker til <code>index.html</code>, altså fila vi redigerer.
+Om-lenken peker til <code>om.html</code> som skal handle om deg. Videoer-lenken peker til
+<code>videoer.html</code> som vi skal fylle ut senere. </p>
+
+<ul>
+<li>For å få det til å se litt finere ut kan vi flytte menyen til midten av siden: </li>
+</ul>
+
+<pre><code>#nav { 
+    text-align: center;
+}
+</code></pre>
+
+<ul>
+<li>Og siden vi har satt en at hver av <code>a</code> taggene tilhører klassen <code>nav-link</code> kan
+vi si at de skal alltid være svart og ikke være understreket: </li>
+</ul>
+
+<pre><code>.nav-link {
+    text-decoration: none;
+    color: black;
+}
+</code></pre>
+
+<p>Du kan selvfølgelig velge hvilken farge du vil at lenkene skal være, velg gjerne
+noe annet enn svart! </p>
+
+<p>For å flytte overskrifta litt ned kan du legge inn denne CSS regelen til <code>div</code>
+taggen til menyen: </p>
+
+<pre><code>    margin-bottom: 50px;
+</code></pre>
+
+<h2>
+<a id="steg-3-lag-en-side-om-deg-selv" class="anchor" href="#steg-3-lag-en-side-om-deg-selv" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 3: Lag en side om deg selv</h2>
+
+<p>Om du ikke har laget en side om deg selv må du gjøre det! Hvis du allerede har
+en side klar trenger du kun å legge til en navigasjonsmeny helt øverst på sida. </p>
+
+<ul>
+<li>Til de som ikke har en side om seg selv: Åpne <code>om.html</code> i et tekstprogram og følg beskrivelsen i Prosjekt 1. </li>
+<li>De som allerede har en side: Åpne <code>om.html</code> i et tekstprogram og lim inn
+<code>div</code>-en med menyen i tillegg til CSS-reglene i <code>style</code>-delen av headeren. </li>
+</ul>
+
+<h2>
+<a id="steg-4-youtube-videoer" class="anchor" href="#steg-4-youtube-videoer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steg 4: YouTube-videoer!</h2>
+
+<p>Nå skal vi lage en side med et par YouTube videoer!! </p>
+
+<ul>
+<li>Åpne <code>videoer.html</code> som du lagde i steg 1. </li>
+<li>Legg til samme meny og CSS-regler som du har på de andre sidene. Det betyr at
+<code>body</code>-en av siden din skal starte med</li>
+</ul>
+
+<pre><code>&lt;div id="nav"&gt; 
+    &lt;a class="nav-link" href="index.html"&gt;Hjem&lt;/a&gt; / 
+    &lt;a class="nav-link" href="om.html"&gt;Om&lt;/a&gt; /
+    &lt;a class="nav-link" href="videoer.html"&gt;Videoer&lt;/a&gt;
+&lt;/div&gt; 
+</code></pre>
+
+<p>og i <code>style</code>-en skal du ha </p>
+
+<pre><code>#nav { 
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+
+</code></pre>
+
+<p>eller det du hadde i <code>index.html</code>. </p>
+
+<p>Når du har lagt inn menyen øverst skal vi legge til videoer. Hver video legger
+vi en <code>div</code> som inneholder en overskrift, selve videoen, en beskrivelse av
+videoen, og en strek på skjermen for å dele opp sida. Hvilke tagger du vil bruke
+kan du velge selv, her er et eksempel: </p>
+
+<pre><code>&lt;div id="video"&gt; 
+    &lt;h3&gt; Musikkvideo fra Resirkulert &lt;/h3&gt;
+
+    &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/UbDcMur37iQ?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+    &lt;p&gt;
+        Her er en musikkvideo fra Kåfjord-bandet &lt;a
+        href="https://www.facebook.com/Storfjordband"&gt;Resirkulert &lt;/a&gt; 
+    &lt;/p&gt; 
+
+    &lt;hr&gt; 
+&lt;/div&gt;
+</code></pre>
+
+<p>Fortsett med å legge inn flere av disse helt til du har lagt til så mange
+videoer du vil ta med. For å få de sentrert og med litt luft mellom seg kan du
+legge til CSS regelen: </p>
+
+<pre><code>#video {
+    text-align: center; 
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}
+</code></pre>
 
 <h1>
-<a id="prosjekt-4-litt-programmering" class="anchor" href="#prosjekt-4-litt-programmering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prosjekt 4: Litt programmering</h1>
+<a id="ressurser" class="anchor" href="#ressurser" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ressurser</h1>
 
-<p>Her kommer det en oppgave hvor dere skal lære litt om programmeringsspråket JavaScript. </p>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en/docs/Web/HTML/Element">HTML tags</a> </li>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS referanse</a> </li>
+</ul>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/skolelab/nettsider">nettsider</a> is maintained by <a href="https://github.com/skolelab">skolelab</a>.</span>
