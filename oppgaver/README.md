@@ -4,6 +4,7 @@ scratch og lage en nettside om deg og ting du liker. Du kommer til å lære de
 vanligste HTML-taggene som lar deg lage lister, sette inn bilder, sette in
 linker og til og med en video fra YouTube!
 
+
 ## Steg 1: Sette opp noen mapper og filer
 Det første du må gjøre er å sette opp en mappe hvor vi kan ha nettsiden vår.
 
@@ -233,16 +234,315 @@ For å få nettsida online skal vi bruke en side som heter
 og du blir sendt vidre til nettsida du lagde. Fungerte det? 
 
 # Prosjekt 2: Styling av nettsider 
-Her kommer en oppgave om styling av nettsider. 
+I denne oppgaven skal vi få nettsida til å bli litt finere! For å plassere og
+sette farge på ting har vi et språk som heter CSS (Cascading style sheets). 
+
+## Steg 1: Legge til styles
+CSS som beskriver hvordan nettsida vår ser ut legger vi inne i `head` taggen
+øverst i HTML-en. 
+
+- Åpne index.html fra forrige oppgave i et tekstprogram (f.eks Notepad++)
+- I `head` taggen legger du til
+
+```
+<style>
+
+body {
+    background-color: pink;
+}
+
+</style> 
+```
+
+slik at starten på `index.html` ser slik ut: 
+
+```
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <style>
+            body {
+                background-color: pink;
+            }
+        </style>
+
+        .
+        .
+        .
+```
+
+- Åpne index.html i en nettleser og se at bakgrunnsfargen ble rosa. 
+
+## Steg 2: Overskrifter 
+La oss lage de små overskfitene grønn. Da kan vi legge inn en regel for alle
+`h3` taggene: 
+
+``` 
+h3 {
+    color: green;
+}
+```
+
+Kodesnutten over skal legges inn under koden vi la inn i steg 1. Men hva om vi
+vil at én av overskfitene skal være blå? La oss lage overskriften som står over
+bildet blå. I CSS-en vår nå har vi sakt at alt som er markert med `h3` skal være
+grønt, men nå vil vi at én av de skal være blå.  Da trenger vi å gi overskrifta
+en `id` som vi kan bruke i CSS-en vår. 
+
+- I `index.html` gå til overskrifta over bildet og endre `h3` taggen litt: 
+
+```
+<h3 id="overskrift"> Hvordan det føles å være ... 
+``` 
+
+se at vi har lagt inn `id="overskrift"`
+- Legg til CSS-en vår legge til
+
+``` 
+#overskrift {
+    color: blue;
+}
+```
+
+i CSS-en vår øverst i index.html. 
+
+
+## Steg 3: Sentrering av bilder og tekst
+La oss få bildet og overskrifta til å ligge sentrert på sida. I HTML bruker vi
+`div` tagger for å dele opp forskjellige deler av sida. 
+
+- Pakk inn overskrifta og bildet i en `div` med `id=bilde`: 
+
+```
+<div id="bilde">
+    
+    <h3 id="overskrift"> Hvordan det føles ...
+    <img src="....
+
+</div> 
+```
+
+- legg til en regel i CSS-en: 
+
+```
+#bilde { 
+    text-align: center;
+}
+```
+
+- Sjekk at overskrifta og bildet kommer midt på sida. 
+
+## (BONUS) Steg 4: Gjør nettsida finere
+Nå ser egentlig ikke nettsida ut. Kan du gjøre den finere? Her er det bare å
+prøve seg fram med farger og layout! Nederst på sida finner du noen ressurser
+til både HTML og CSS. 
+
+## (BONUS) Steg 5: Gjør nettsida tilgjengelig online! 
+
+Gå tilbake til prosjekt 2 og last opp denne sida på nettet! 
+
 
 # Prosjekt 3:  Egen nettside med videoer fra YouTube
-Denne oppgaven har ingen oppgavetekst, så denne blir litt vanskeligere. Du skal
-lage en helt egen nettside som inneholder top 10 videoer fra YouTube om et tema
-du velger selv. Liker du MineCraf? Justin Bieber? T.I.L? T.U.I.L? Hest? Finn
-fram videoene fra YouTube og lag en side som lister opp disse. Ta gjerne med en
-liten beskrivelse av hvorfor videoene er med på lista! 
 
-Tips til hvordan man legger inn en YouTube-video finner dere her: [http://kodeklubben.github.io/web/lesson8/lesson8.html](http://kodeklubben.github.io/web/lesson8/lesson8.html). 
+Dette er det siste prosjektet hvor vi skal lage en nettside som består av flere
+HTML-filer som inneholder litt tekst om deg selv og noen YouTube-videoer.
+Nettsida om deg selv kan du gjenbruke fra Prosjekt 1 eller starte med en helt ny
+side. Her kommer vi kun til å gi dere et enkelt eksempel. Dere må selv finne ut
+av hva dere vil ha på sida og være litt kreativ i bruk av farger. 
 
-# Prosjekt 4: Litt programmering
-Her kommer det en oppgave hvor dere skal lære litt om programmeringsspråket JavaScript. 
+Hvis du vil se en demo av hvordan sida kan se ut kan du se
+[her](http://bl.ocks.org/fjukstad/raw/ebb02d8f4bd48b6e26b0/).
+
+
+## Steg 1: Lag en mappe og noen tomme filer.
+Det første vi må gjøre er å sette opp en tom mappe for nettsida vår i tillegg
+til noen tomme HTML-filer vi kan legge innhold i. 
+
+- Lag en mappe som heter `nettside` og legg den et sted du husker, f.eks på
+  Skrivebordet
+- I denne mappa lager du 3 filer som heter `index.html`, `om.html` og
+  `videoer.html`. Om du vil gjenbruke sida du laget om deg selv kan du kopiere
+  den inn i mappa og kalle den `om.html`. 
+- I alle de nye filene legger du inn: 
+
+```
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <style>
+        </style>
+    </head>
+    
+    <body>
+    </body>
+</html> 
+```
+
+Husk at du ikke skal legge dette inn i `om.html` om du gjenbruker sida fra
+Prosjekt 1. Nå har vi tre HTML filer vi kan begynne å legge inn innhold i! 
+
+
+## Steg 2: Velkomstside
+Nå skal vi få satt opp en velkomstside som sier hei og har lenker til de andre
+sidene.
+
+- Åpne `index.html` i et tekstprogram
+- Lag en overskrift og en velkomstmelding: 
+
+```
+<h1> Overskrift (sett inn noe her) </h1> 
+<p> 
+    Her kan du skrive en fin velkomstmelding 
+</p> 
+```
+Koden over skal inn i `body` taggen på HTML-sida. 
+
+- Sjekk at du får inn en overskrift 
+
+Vi vil gjerne at teksten skal være på midten, så da kan vi pakke alt inn i en
+`div` og sentrere den med litt CSS.
+
+- Pakk overskriften inn i en `div` og lag en CSS regel: 
+
+```
+<div id="tekst">
+    <h1> Overskrift .....
+
+</div> 
+```
+
+og CSS-regelen blir da: 
+
+```
+#tekst { 
+    text-align: center;
+}
+```
+
+- Sjekk at det blir sentrert på sida.
+
+Nå må vi få inn en navigasjonsmeny på toppen! 
+
+- Lag et nytt `div` element over overskriften som vi kaller `nav`. Inne i denne
+  lager vi noen lenker til de andre sidene: 
+
+```
+    <div id="nav"> 
+        <a class="nav-link" href="index.html">Hjem</a> / 
+        <a class="nav-link" href="om.html">Om</a> /
+        <a class="nav-link" href="videoer.html">Videoer</a>
+    </div> 
+```
+
+Denne koden setter opp en `div` med tre linker (`a` elementene) som hver peker
+til hver sin side. Hjem-lenken peker til `index.html`, altså fila vi redigerer.
+Om-lenken peker til `om.html` som skal handle om deg. Videoer-lenken peker til
+`videoer.html` som vi skal fylle ut senere. 
+
+- For å få det til å se litt finere ut kan vi flytte menyen til midten av siden: 
+
+```
+#nav { 
+    text-align: center;
+}
+```
+
+- Og siden vi har satt en at hver av `a` taggene tilhører klassen `nav-link` kan
+  vi si at de skal alltid være svart og ikke være understreket: 
+
+```
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+```
+
+Du kan selvfølgelig velge hvilken farge du vil at lenkene skal være, velg gjerne
+noe annet enn svart! 
+
+For å flytte overskrifta litt ned kan du legge inn denne CSS regelen til `div`
+taggen til menyen: 
+
+```
+    margin-bottom: 50px;
+```
+
+## Steg 3: Lag en side om deg selv
+Om du ikke har laget en side om deg selv må du gjøre det! Hvis du allerede har
+en side klar trenger du kun å legge til en navigasjonsmeny helt øverst på sida. 
+
+- Til de som ikke har en side om seg selv: Åpne `om.html` i et tekstprogram og følg beskrivelsen i Prosjekt 1. 
+- De som allerede har en side: Åpne `om.html` i et tekstprogram og lim inn
+  `div`-en med menyen i tillegg til CSS-reglene i `style`-delen av headeren. 
+
+
+
+## Steg 4: YouTube-videoer! 
+Nå skal vi lage en side med et par YouTube videoer!! 
+
+- Åpne `videoer.html` som du lagde i steg 1. 
+- Legg til samme meny og CSS-regler som du har på de andre sidene. Det betyr at
+  `body`-en av siden din skal starte med
+
+```
+<div id="nav"> 
+    <a class="nav-link" href="index.html">Hjem</a> / 
+    <a class="nav-link" href="om.html">Om</a> /
+    <a class="nav-link" href="videoer.html">Videoer</a>
+</div> 
+```
+
+og i `style`-en skal du ha 
+
+```
+#nav { 
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+
+```
+
+eller det du hadde i `index.html`. 
+
+
+Når du har lagt inn menyen øverst skal vi legge til videoer. Hver video legger
+vi en `div` som inneholder en overskrift, selve videoen, en beskrivelse av
+videoen, og en strek på skjermen for å dele opp sida. Hvilke tagger du vil bruke
+kan du velge selv, her er et eksempel: 
+
+```
+<div id="video"> 
+    <h3> Musikkvideo fra Resirkulert </h3>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/UbDcMur37iQ?rel=0" frameborder="0" allowfullscreen></iframe>
+
+    <p>
+        Her er en musikkvideo fra Kåfjord-bandet <a
+        href="https://www.facebook.com/Storfjordband">Resirkulert </a> 
+    </p> 
+
+    <hr> 
+</div>
+```
+
+Fortsett med å legge inn flere av disse helt til du har lagt til så mange
+videoer du vil ta med. For å få de sentrert og med litt luft mellom seg kan du
+legge til CSS regelen: 
+
+```
+#video {
+    text-align: center; 
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}
+```
+
+# Ressurser
+- [HTML tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) 
+- [CSS referanse](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) 
